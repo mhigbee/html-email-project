@@ -51,14 +51,6 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		/** Hotmail header color reset: Hotmail replaces your header color styles with a green color on H2, H3, H4, H5, and H6 tags. In this example, the color is reset to black for a non-linked header, blue for a linked header, red for an active header (limited support), and purple for a visited header (limited support).  Replace with your choice of color. The !important is really what is overriding Hotmail's styling. Hotmail also sets the H1 and H2 tags to the same size.
 		Bring inline: Yes.
 		**/
-		h1, h2, h3, h4, h5, h6 {color: black !important;}
-		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue !important;}
-		h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
-			color: red !important; /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
-		 }
-		h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
-			color: purple !important; /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
-		}
 		/** Outlook 07, 10 Padding issue: These "newer" versions of Outlook add some padding around table cells potentially throwing off your perfectly pixeled table.  The issue can cause added space and also throw off borders completely.  Use this fix in your header or inline to safely fix your table woes.
 		More info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells/
 		http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07/
@@ -148,19 +140,46 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 <body>
 	<table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
 	<tr>
-    <td valign="top">
-      <img src="https://www.dropbox.com/s/mzybcjafa3kq7e0/deal-shop-logo.png" alt="logo">
-      <span style="color:#5a5a5a">Deal Shop</span>
+    <td valign="top" style="display: flex; justify-content:center">
+      <h2 style="color:#5a5a5a; font-size: 30px;padding: 10px;">Deal Shop</h2>
     </td>
   </tr>
-
-		<table cellpadding="0" cellspacing="0" border="0" align="center">
-			<tr>
-				<td width="600" valign="top"><img src="" alt="logo"></td>
-				<td width="600" valign="top"></td>
-				<td width="600" valign="top"></td>
-			</tr>
-    
+  <tr>
+    <td valign="top">
+      <img src="https://cdn.dribbble.com/users/1769954/screenshots/3656344/robot_1x.png" 
+      alt="logo" style="display: block; margin: 0 auto; height: 150px" >
+      <p style="text-align: center;">Complete Your Purchase</p>
+      <p style="text-align: center;">natus error sit voluptatem accusantium doloremque laudantium</p>
+    </td>
+  </tr>
+  <tr>
+    <td halign="center" style="background-color:#4285f4;display: flex;
+    justify-content: center;">
+      <span style="text-align:center; color: white; height: 55px;">Order Summary</span>
+    </td>
+  </tr>
+  <tr>
+    <td halign="center" style="height: 50px"></td>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" >
+      <a href="/buy" style="color:white; font-size: 20px; text-align:center; 
+      background-color:#4285f4; margin: 20px 0; padding: 5px 30px;
+      border-radius: 5px;">Buy Now</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" >
+      <h2>BEST BOX EVER</h2>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" >
+      <img style="height: 400px" src="https://singingrooster.org/wp-content/uploads/cardboardbox.jpg">
+    </td>
+  </tr>
+  
     <!-- 5a5a5a
     e7e7e7
     #4285f4 -->
